@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lan="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+<script>
+/* const largestEvenNum =(arr) => {
+ let arr1 = arr.filter(value => value % 2 ===0).sort((a,b)=> a-b);
+ return arr1[arr1.length - 1] ;
+} */
+
+   
+
+   function largestEvenNum (arr){
+    let arr1 = arr.filter(value => value % 2 === 0) ;
+    let arr2 = arr1.sort((a,b) => a-b) ;
+     return arr2[arr2.length - 1] ;
+   }
+
+console.log(largestEvenNum([12,31,22,21,6,8,53,26])) ;
+</script>
+  </body>
+  </html>
+
+  
+
+

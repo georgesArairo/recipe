@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lan="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+<script>
+
+/* 
+strin = "i'm your best friend bro"
+    steps : 
+    1- function
+    2-  string to arr => .split(" ")
+    3- for( i=1 ; i < arr.length ; i++) loop => (arr[0].length > arr[i].length )? arr[0] = arr[i] : arr[0];
+    4- 
+*/
+  const biggestWord = (str) => {
+    let arr = str.split(" ") ;
+   for (let i =1 ; i< arr.length ; i++){
+    (arr[0].length > arr[i].length)? arr[0] : arr[0] = arr[i] ;
+   }
+   return arr[0] ;
+  }
+  console.log(biggestWord("i'm your best friend bro trust me georges")) ;
+  // the idea behind this exercise is to fix one number and let all the rest compare with it 
+</script>
+  </body>
+  </html>

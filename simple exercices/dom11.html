@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lan="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  </head>
+<body>
+<div id="drag-element" draggable="true">Drag me</div>
+<div id="drop-area">Drop here</div>
+
+<script>
+//Implementing a Drag-and-Drop Interface: Implement a drag-and-drop interface using JavaScript and the HTML5 drag-and-drop API. You can use event listeners to detect when the user starts dragging an element, moves it around the page, and drops it onto a target area.
+
+
+// Get the drag element and the drop area
+var dragElement = document.getElementById('drag-element');
+var dropArea = document.getElementById('drop-area');
+
+// Add event listeners for the drag events
+dragElement.addEventListener('dragstart', dragStart);
+dragElement.addEventListener('dragend', dragEnd);
+
+// Add event listeners for the drop events
+dropArea.addEventListener('dragenter', dragEnter);
+dropArea.addEventListener('dragover', dragOver);
+dropArea.addEventListener('dragleave', dragLeave);
+dropArea.addEventListener('drop', drop);
+
+// Functions for handling the drag events
+function dragStart(event) {
+  event.dataTransfer.setData('text', event.target.id);
+  event.target.classList.add('dragging');
+}
+
+function dragEnd(event) {
+  event.target.classList.remove('dragging');
+}
+
+// Functions for handling the drop events
+function dragEnter(event) {
+  event.preventDefault();
+  event.target.classList.add('drag-over');
+}
+
+function dragOver(event) {
+  event.preventDefault();
+}
+
+function dragLeave(event) {
+  event.target.classList.remove('drag-over');
+}
+
+function drop(event) {
+  event.preventDefault();
+  var data = event.dataTransfer.getData('text');
+  var draggedElement = document.getElementById(data);
+  event.target.appendChild(draggedElement);
+  event.target.classList.remove('drag-over');
+}
+
+
+</script>
+</body>
+</html>

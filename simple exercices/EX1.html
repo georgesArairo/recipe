@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lan="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+<script>
+    const quotes = [  "The only way to do great work is to love what you do. -Steve Jobs",  "Innovation distinguishes between a leader and a follower. -Steve Jobs",  "Stay hungry, stay foolish. -Steve Jobs",  "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. -Steve Jobs",  "It's not about money. It's about the people you have, how you're led, and how much you get it. -Steve Jobs",  "Design is not just what it looks like and feels like. Design is how it works. -Steve Jobs"];
+
+    const randomQuote= () => {
+         const randomNumber = Math.floor(Math.random() * quotes.length) ;
+       return quotes[randomNumber] + 'br' + 'br' ;
+    }
+    const button = document.createElement('button') ;
+    button.innerText = "New Quote" ;
+    document.body.append(button) ;
+
+    button.addEventListener('click', function(){
+      const quote = randomQuote() ;
+       console.log(quote) ;
+    })
+    
+
+    /* something to search for tomorow :
+       1- document.querySelector();
+       2-element.setAttribute('id', 'georges')  --> gives an id to that element
+       3-element.getAttribute('id')   --> gives us the id of that element
+       4-document.createElement('button') --> creates a new element
+       5-document.body.append(button)   --> after creating an element it should be appened to work out
+       6-difference between innerText - innerHTML - textContent
+       7-element.classList('zalfa')   --> gives a class to the list 
+       8- element.classList.contains('a class ')   --> gives a true or false if the element contain a specific class
+       9- element.remove()  --> after creating an element if we wanted to remove it                 
+                        
+                        
+                        
+                        
+                        
+                        
+                        */
+    
+
+</script>
+  </body>
+  </html>

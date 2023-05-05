@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lan="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+  <h1 id = 'name'>If You Love Me Turn Red</h1>
+<script>
+//Use the DOM to change the background color of an element when the mouse hovers over it.
+
+const h1 = document.querySelector('#name') ;
+h1.addEventListener('mouseover' , function(){
+    h1.style.color = 'red' ;
+})
+h1.addEventListener('mouseout' , function(){
+    h1.style.color = 'black' ;
+})
+
+</script>
+  </body>
+  </html>

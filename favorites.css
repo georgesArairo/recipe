@@ -1,0 +1,47 @@
+body{
+    background: url(favorites1.jpg) no-repeat center center/cover ;
+    height: 100vh;
+    position: relative;
+}
+#favorites{
+    display: inline-block;
+}
+h2{
+    text-align: center;
+}
+.list{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+    transform: translateY(50px);
+}
+.navbar-form{
+    position: absolute;
+    right: 0;
+}
+#myList li {
+    list-style: none;
+ }
+ #myList li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    line-height: 8px;
+    letter-spacing: 2px;
+    font-size: 12px;
+    background-color: rgb(246, 246, 246);
+    display: block;
+    padding: 5px 10px;
+    position: relative;
+    margin-left: -40px;
+   
+}
+ #myList li a:hover{
+     background-color: hsl(0, 3%, 43%);
+     cursor: pointer;
+     transition: .5s;
+     color: rgb(238, 238, 238);
+ }
+ #myList{
+     display: none;
+ }

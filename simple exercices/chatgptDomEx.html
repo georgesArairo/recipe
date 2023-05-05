@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lan="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+   <style>
+ /* css styling */ 
+* {
+margin: 0 ;
+padding : 0 ;
+}
+h2 {
+    text-align : center ;
+    color : coral ; 
+    padding : 20px 10px ;
+    // background : grey ;
+    border-radius : 20px ;
+    width : 100% ;
+}
+.button{
+  margin : 20px 0 0 20px ;
+  padding : 5px 5px ; 
+}
+.text { 
+  margin : 0 0 0 20px ;
+  padding : 10px 10px ;
+  font-size : 15px ; 
+}
+#list {
+  margin: 0 0 0 20px ;
+}
+.toDoContainer{
+   // display : flex ; 
+  // align-items: center;
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+   </style>
+  </head>
+
+  <body>
+  <!-- html code -->
+        <h2>To Do List</h2>
+
+         <div class = 'toDoContainer'>
+        <input type = 'text' placeholder = 'add your event' class = 'text'>
+            <button class = 'button'>add event</button>
+            <ul id = 'list'></ul>
+          </div>
+
+<script>
+        // javascript code
+
+const input = document.getElementsByClassName('text')[0];
+const addButton = document.getElementsByClassName('button')[0] ;
+const list = document.getElementById('list') ;
+
+addButton.addEventListener('click' , function(){
+  const task = input.value ; 
+  if (task !== '') {
+    const li = document.createElement('li') ;
+    list.append(li) ;
+    li.textContent = task ; 
+    input.value = "" ;
+  } 
+    
+
+})
+
+// this code adds a class 'completed' for the element 
+list.addEventListener("click", function (e) {
+  const element = e.target;
+  if (element.tagName === "LI") {
+    element.classList.toggle("completed");
+  }
+  console.log(element.getAttribute('class')) ;
+});
+
+</script>
+  </body>
+  </html>

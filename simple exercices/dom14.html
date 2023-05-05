@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lan="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="dom14.css" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+  <!-- modal open button -->
+  <button id = "open-btn"> Where's our modal</button>
+
+  <!-- modal and modal background -->
+  <div id ="modal-container">
+  <div id ="modal">
+  <p>here I am!</p>
+  <div id ="close-btn">&times;</div>
+  </div>
+  </div>
+
+
+<script>
+// variables
+let openBtn = document.querySelector('#open-btn');
+let modalContainer = document.querySelector('#modal-container');
+let modal = document.querySelector('#modal'); // we may not use this variable because its just a text 
+let closeBtn = document.querySelector('#close-btn');
+
+// eventlisteners
+
+openBtn.addEventListener('click', function(){
+    modalContainer.style.display = 'block' ;
+}) ;
+closeBtn.addEventListener('click' , function(){
+    modalContainer.style.display = 'none' ;
+}) ;
+window.addEventListener('click' , function(e){
+   
+       (e.target === openBtn )? modalContainer.style.display = 'block' : modalContainer.style.display = 'none' ;
+}) ;
+
+
+</script>
+  </body>
+  </html>

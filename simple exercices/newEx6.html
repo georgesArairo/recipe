@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lan="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+  <p id = "demo"></p>
+
+ <script>
+
+/* 
+    steps :
+   1- combine 2 different arrays  
+   2- sort the new combined array ascending
+    */
+
+        const combineArr = (arr1 ,arr2) => arr1.concat(arr2).sort((a,b) => a-b) ;
+
+        console.log(combineArr([1,3,5,7] , [2,4,6])) ;
+ </script>
+ </body>
+ </html>
