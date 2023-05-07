@@ -1,20 +1,50 @@
-#container{
-    margin-left: 60px;
-}
-#container #dessert{
-    margin: 30px 40px;
-}
-#dessert{
-    display: inline-block;
+*{
+    margin: 0;
+    padding: 0;
 }
 h2{
     text-align: center;
 }
+#container{
+    transform: translate(60px,50px);
+}
+#image1{
+    display: inline-block;
+}
+
+#container #image1 .num1{
+    font-size: 18px;
+    margin: 5px 0;
+}
+#container #image2 {
+    transform: translateX(70px);
+    display: inline-block;
+}
+#container #image2 .num2{
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+#container #image3{
+    display: inline-block;
+    transform: translate(140px, -37px);
+
+}
+#container #image3 .num3{
+    position: absolute;
+    display: block;
+     font-size: 18px;
+    margin: 5px 0;
+ }
+ /* i had a prob with the last list so i've add this code */
+ #container #image3 .prob1{
+   transform: translateY(37px);
+ }
 .list{
     font-weight: bold;
     font-size: 15px;
     line-height: 25px;
-    transform: translateY(50px);
+    margin-left: 10px;
 }
 .navbar-form{
     position: absolute;
@@ -45,21 +75,6 @@ h2{
  }
  #myList{
      display: none;
- }
- .num1{
-    position: absolute;
-    transform: translate(100px , -250px);
-    font-size: 18px;
- }
- .num2{
-    position: absolute;
-    transform: translate(490px , -250px);
-    font-size: 18px;
- }
- .num3{
-    position: absolute;
-    transform: translate(880px , -250px);
-    font-size: 18px;
  }
  .glyphiconContainer a :nth-child(1):hover{
     color: yellow;

@@ -1,3 +1,4 @@
+/* all the code is common between recipe and favorites except the body background */
 body{
     background: url(../recipe.jpg) no-repeat center center/cover ;
     height: 100vh;

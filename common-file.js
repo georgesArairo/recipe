@@ -33,6 +33,7 @@ input.addEventListener('keyup',function(){
     const image1Star = document.querySelectorAll('.num1 .star');
     const image2Star = document.querySelectorAll('.num2 .star');
     const image3Star = document.querySelectorAll('.num3 .star');
+    
     // data to store rating score
     let data = [] ;
 
