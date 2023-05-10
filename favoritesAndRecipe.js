@@ -1,3 +1,14 @@
+ const body = document.body ;
+if(pageTitle === "favorites"){
+    body.style.background ="url(favorites1.jpg) no-repeat center center/cover" ;
+    body.style.height = "100vh" ;
+    body.style.position ="relative" ;
+} else {
+    body.style.background ="url(../recipe.jpg) no-repeat center center/cover" ;
+    body.style.height = "100vh" ;
+    body.style.position ="relative" ;
+}
+
 const input = document.querySelector('.form-control') ;
 const myList = document.querySelector('#myList') ;
 input.addEventListener('click',function(){

@@ -28,7 +28,6 @@ h2{
 #container #image3{
     display: inline-block;
     transform: translate(140px, -37px);
-
 }
 #container #image3 .num3{
     position: absolute;
@@ -73,8 +72,13 @@ h2{
      transition: .5s;
      color: rgb(238, 238, 238);
  }
+ /* to use the z-index you need to put first the position absolute or relative or fixed*/
  #myList{
      display: none;
+     position: absolute;
+     z-index: 1 ;
+     transform: translateX(137px);
+    
  }
  .glyphiconContainer a :nth-child(1):hover{
     color: yellow;
